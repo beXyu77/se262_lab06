@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html
+  lang="en"
+  xmlns:mso="urn:schemas-microsoft-com:office:office"
+  xmlns:msdt="uuid:C2F41010-65B3-11d1-A29F-00AA00C14882">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  </head>
+  <body>
+
+    <p></p>
+
+    <script>
+      // write your code here
+      // 1.Take the age via prompt box [1 point]
+      var age= prompt('What is your current age ?');
+
+      function lifeInWeeks(age) {
+        // 2. Create an Object variable for storing properties of "days", "weeks" and "months"
+        var remainingTime = {};
+
+        // 3. Compute remaining times and store values into the Object properties and return the object [2 points]
+        var maxAge = 90;
+        var yearsLeft = maxAge - age;
+        var daysLeft = yearsLeft * 365;
+        var weeksLeft = yearsLeft * 52;
+        var monthsLeft = yearsLeft * 12;
+
+        remainingTime.days = daysLeft;
+        remainingTime.weeks = weeksLeft;
+        remainingTime.months = monthsLeft;
+
+        return remainingTime;
+      }
+
+      // 4. Call the "lifeInWeeks" which returns the Object of remaining times
+      var remainingTimeObject = lifeInWeeks(age);
+
+      // 5. Manipulate values of the Object to display result in an alert box with the format “You have x days, y weeks, and z months left.” 
+      // [2 points]
+      var resultMessage = "You have " + remainingTimeObject.days + " days, " +
+                            remainingTimeObject.weeks + " weeks, and " +
+                            remainingTimeObject.months + " months left.";
+      
+      alert(resultMessage);
+
+    </script>
+  </body>
+</html>
